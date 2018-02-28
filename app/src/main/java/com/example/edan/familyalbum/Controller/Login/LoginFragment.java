@@ -29,6 +29,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        ((MainActivity) getActivity()).showAlbumsFragment();
+        //((MainActivity) getActivity()).showAlbumsFragment();
     }
 }
