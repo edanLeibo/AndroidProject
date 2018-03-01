@@ -3,6 +3,7 @@ package com.example.edan.familyalbum.Controller;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.edan.familyalbum.Controller.Albums.AlbumsFragment;
 import com.example.edan.familyalbum.Controller.Login.LoginFragment;
 import com.example.edan.familyalbum.Entities.Album;
 import com.example.edan.familyalbum.Entities.Comment;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AlbumsFragment.OnFragmentInteractionListener {
 
     private List<Album> albums;
 
@@ -41,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-   /* public void showAlbumsFragment() {
+   public void showAlbumsFragment() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, AlbumsFragment.newInstance(albums))
                 .commit();
     }
-
+/*
     public void showAlbumFragment() {
         showAlbumFragment(albums.get(0));
     }
@@ -78,5 +79,10 @@ public class MainActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.container, new LoginFragment())
                 .commit();
+    }
+
+    @Override
+    public void onItemSelected(Album album) {
+
     }
 }
