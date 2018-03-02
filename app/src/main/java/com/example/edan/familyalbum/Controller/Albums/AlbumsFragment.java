@@ -25,7 +25,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by Idan on 28/02/2018.
+ * Created by Edan on 28/02/2018.
  */
 
 public class AlbumsFragment extends Fragment {
@@ -80,7 +80,7 @@ public class AlbumsFragment extends Fragment {
         view.findViewById(R.id.btn_add).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // ((MainActivity) getActivity()).showCreateAlbumFragment();
+                ((MainActivity) getActivity()).showCreateAlbumFragment();
             }
         });
         return view;

@@ -3,6 +3,7 @@ package com.example.edan.familyalbum.Controller;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.edan.familyalbum.Controller.Album.CreateAlbumFragment;
 import com.example.edan.familyalbum.Controller.Albums.AlbumsFragment;
 import com.example.edan.familyalbum.Controller.Login.LoginFragment;
 import com.example.edan.familyalbum.Entities.Album;
@@ -42,21 +43,17 @@ public class MainActivity extends AppCompatActivity implements AlbumsFragment.On
         }
     }
 
+    public void showLoginFragment() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, new LoginFragment())
+                .commit();
+    }
+
    public void showAlbumsFragment() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, AlbumsFragment.newInstance(albums))
-                .commit();
-    }
-/*
-    public void showAlbumFragment() {
-        showAlbumFragment(albums.get(0));
-    }
-
-    public void showAlbumFragment(Album album) {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.container, AlbumFragment.newInstance(album))
                 .commit();
     }
 
@@ -67,6 +64,19 @@ public class MainActivity extends AppCompatActivity implements AlbumsFragment.On
                 .commit();
     }
 
+
+    public void showAlbumFragment() {
+        showAlbumFragment(albums.get(0));
+    }
+
+    public void showAlbumFragment(Album album) {
+/*        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, AlbumFragment.newInstance(album))
+                .commit();*/
+    }
+
+/*
     public void showCommentsFragment(Album album) {
         getSupportFragmentManager()
                 .beginTransaction()
@@ -74,12 +84,7 @@ public class MainActivity extends AppCompatActivity implements AlbumsFragment.On
                 .commit();
     }*/
 
-    public void showLoginFragment() {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.container, new LoginFragment())
-                .commit();
-    }
+
 
     @Override
     public void onItemSelected(Album album) {
