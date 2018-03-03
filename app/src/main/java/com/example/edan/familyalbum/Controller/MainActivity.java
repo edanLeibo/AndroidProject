@@ -3,6 +3,7 @@ package com.example.edan.familyalbum.Controller;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.edan.familyalbum.Controller.Album.AlbumFragment;
 import com.example.edan.familyalbum.Controller.Album.CreateAlbumFragment;
 import com.example.edan.familyalbum.Controller.Albums.AlbumsFragment;
 import com.example.edan.familyalbum.Controller.Login.LoginFragment;
@@ -70,10 +71,10 @@ public class MainActivity extends AppCompatActivity implements AlbumsFragment.On
     }
 
     public void showAlbumFragment(Album album) {
-/*        getSupportFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, AlbumFragment.newInstance(album))
-                .commit();*/
+                .commit();
     }
 
 /*
